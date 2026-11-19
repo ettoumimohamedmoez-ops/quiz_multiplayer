@@ -1,19 +1,28 @@
-# quiz_multijoueur
+# Quiz Multijoueur
 
-A new Flutter project.
+Application Flutter de quiz multijoueur en direct.
 
-## Getting Started
+## Description
 
-This project is a starting point for a Flutter application.
+Ce projet est réalisé dans le cadre du mini-projet de troisième année en Business Computing.
 
-A few resources to get you started if this is your first Flutter project:
+L'application permet de préparer des quiz et de participer à des parties multijoueurs.
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+## Technologies
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-# quiz_multiplayer
-Application Flutter Quiz Multijoueur
+- Flutter
+- Dart
+- Firebase (prévu)
+
+## Fonctionnalités prévues
+
+- Création et gestion des quiz
+- Participation à une partie
+- Salle d'attente
+- Quiz en direct
+- Classement des joueurs
+- Génération de questions avec l'IA
+
+## État du projet
+
+Développement en cours.
