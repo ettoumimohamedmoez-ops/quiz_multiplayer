@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 
 void main() {
   runApp(const QuizApp());
@@ -161,10 +162,15 @@ class HomePage extends StatelessWidget {
                               Align(
                                 alignment: Alignment.topRight,
                                 child: IconButton(
-                                  onPressed: () => showMessage(
-                                    context,
-                                    'Paramètres bientôt disponibles',
-                                  ),
+                                  onPressed: (){
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) => const
+                                  ParametresPage(),
+                                      ),
+                                    );
+                                  },
                                   icon: const Icon(
                                     Icons.settings,
                                     color: Colors.white,
@@ -680,3 +686,132 @@ class QuizSelectionPage extends StatelessWidget {
     );
   }
 }
+class ParametresPage extends
+StatelessWidget {
+  const ParametresPage({super.key});
+
+  static const Color purple=Color(0XFF9D00FF);
+  static const Color dark= Color(0xFF100020);
+
+  @override
+  Widget build(BuildContext context){
+    return Scaffold(
+      body:Container(
+        decoration: const
+BoxDecoration(
+  gradient: RadialGradient(
+    center: Alignment(0, -0.35),
+    radius: 1.1,
+    colors: [
+      Color(0xFF430078),
+      Color(0xFF19002F),
+      dark,
+    ],
+  ),
+),
+child: SafeArea(
+  child: Stack(
+    children: [
+      Positioned(
+        top: -80,
+        left: -70,
+        child:
+        HomePage.glowCircle(220),
+      ),
+      Positioned(
+        bottom: -80,
+        right: -70,
+        child: 
+        HomePage.glowCircle(220),
+      ),
+      LayoutBuilder(
+        builder: (context,constraints){
+          return SizedBox(
+            width: constraints.maxWidth,
+            height: constraints.maxHeight,
+            child: FittedBox(
+              fit:BoxFit.scaleDown,
+              alignment: Alignment.topCenter,
+              child: SizedBox(
+                width: constraints.maxWidth,
+              child:Padding(
+                padding:const EdgeInsets.symmetric(
+                  horizontal: 22,
+                  vertical: 15,
+                ),
+                  child:Column(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                     Align(
+                        alignment:
+                           Alignment.topLeft ,
+                        child:IconButton(
+                          onPressed: (){
+                            Navigator.pop(context);
+                          },
+                            icon: const Icon(
+                              Icons.arrow_back_ios_new,
+                              color: Colors.white,
+                              size: 28,
+                            ),
+                          ),  
+                        ),
+                        const SizedBox(height:20),
+                        const Icon(
+                          Icons.settings,
+                          color: Color(0xFFE58BFF),
+                          size: 75,
+                          ),
+                        const SizedBox(height: 15),
+                        const Text('PARAMETRE',
+                        style: TextStyle(
+                          fontSize: 32,
+                          fontWeight :FontWeight.w900,
+                          color: Colors.white,
+                          letterSpacing: 2,
+                          shadows: [
+                            Shadow(
+                              color: purple,
+                              blurRadius: 20,
+                            )
+                          ],
+                         ),
+                        ),
+                        const SizedBox(height: 12),
+                        const Text(
+                          'Personnalise ton expérience de votre jeux',
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                                   fontSize: 16,
+                                    color: Colors.white70,
+                          ),
+                        ),
+                        SizedBox(height: 35),
+                        ElevatedButton(
+                          onPressed:() {
+                            const HomePage().showMessage(context,'Profil');
+                          },
+                          child: const Row(children: [
+                            Icon(Icons.person, color:Colors.white),
+                            SizedBox(width: 15),
+                            Text('Profil'),
+                            Spacer(),
+                            Icon(Icons.lock_clock, color:Colors.white70),
+                          ],
+                         ),
+                        )
+                   ],
+                  ),
+                 ),
+                ),
+              ),
+             );
+            },
+          ),
+         ], 
+        ),
+       ),
+      ),
+    );
+   }
+  }
