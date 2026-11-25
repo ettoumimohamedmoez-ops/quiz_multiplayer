@@ -799,7 +799,35 @@ child: SafeArea(
                             Icon(Icons.lock_clock, color:Colors.white70),
                           ],
                          ),
-                        )
+                        ),
+                        const SizedBox(height: 12),
+                        ElevatedButton(
+                          onPressed:() {
+                            const HomePage().showMessage(context, 'Audio');
+                          },
+                          child: const Row(children: [
+                            Icon(Icons.volume_up, color: Colors.white),
+                            SizedBox(width: 15),
+                            Text('Audio'),
+                            Spacer(),
+                            Icon(Icons.lock_clock, color:Colors.white70),
+                          ],
+                        ),
+                      ),
+                      const SizedBox(height: 12),
+                      ElevatedButton(
+                        onPressed:(){
+                          const HomePage().showMessage(context, 'Théme');
+                        },
+                        child: const Row(children: [
+                          Icon(Icons.palette, color:Colors.white),
+                          SizedBox(width: 15),
+                          Text('Théme'),
+                          Spacer(),
+                          Icon(Icons.lock_clock, color:Colors.white70),
+                        ],
+                      ),
+                    ),
                    ],
                   ),
                  ),
