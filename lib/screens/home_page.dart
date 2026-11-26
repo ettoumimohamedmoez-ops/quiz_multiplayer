@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'parametres_page.dart';
+import 'quiz_selection_page.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -148,8 +150,8 @@ class HomePage extends StatelessWidget {
                                     Navigator.push(
                                       context,
                                       MaterialPageRoute(
-                                        builder: (context) => const
-                                  ParametresPage(),
+                                        builder: (context) =>  const 
+                                        ParametresPage(),
                                       ),
                                     );
                                   },
@@ -299,7 +301,8 @@ class HomePage extends StatelessWidget {
                                 onTap: () {
                                   Navigator.push(
                                     context,
-                                    MaterialPageRoute(builder: (context) => const
+                                    MaterialPageRoute(
+                                      builder: (context) => const 
                                     QuizSelectionPage(),
                                 ),
                               );

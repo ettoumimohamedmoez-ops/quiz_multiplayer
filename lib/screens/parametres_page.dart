@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'home_page.dart';
+import 'a_propos_page.dart';
 
 class ParametresPage extends
 StatelessWidget {
@@ -177,7 +178,8 @@ child: SafeArea(
                     ElevatedButton(
                       onPressed: () {
                         Navigator.push(
-                          context,MaterialPageRoute(builder: (context)=> const AProposPage(),
+                          context,MaterialPageRoute(builder: (context)=> 
+                           AProposPage(),
                           ),
                         );
                       },
