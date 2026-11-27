@@ -1,13 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 import 'screens/home_page.dart';
-import 'screens/quiz_selection_page.dart';
-import 'screens/parametres_page.dart';
-import 'screens/a_propos_page.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'firebase_options.dart';
 
 
-void main() {
-  runApp(const QuizApp());
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+   await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+   );
+   debugPrint('Firebase intialized: ${Firebase.apps.isNotEmpty}');
+   runApp(const QuizApp());
 }
 
 class QuizApp extends StatelessWidget {

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "643893865083",
+    "project_id": "quiz-multijoueur-19a33",
+    "storage_bucket": "quiz-multijoueur-19a33.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:643893865083:android:b2b17d7e14936758cf90de",
+        "android_client_info": {
+          "package_name": "com.example.quiz_multijoueur"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCVjMa1HE5Te6S6jX5MupWCuMqrmEHqu_0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
