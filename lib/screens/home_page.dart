@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 import 'parametres_page.dart';
 import 'quiz_selection_page.dart';
 

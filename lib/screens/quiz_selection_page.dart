@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'home_page.dart';
+import 'quiz_editor_page.dart';
 
 
 class QuizSelectionPage extends StatelessWidget {
@@ -76,7 +77,7 @@ class QuizSelectionPage extends StatelessWidget {
 
                     const Center(
                       child: Text(
-                        'PRÉPARER UNE PARTIE',
+                        'Mes Quiz',
                         textAlign: TextAlign.center,
                         style: TextStyle(
                           color: Colors.white,
@@ -120,7 +121,7 @@ class QuizSelectionPage extends StatelessWidget {
 
                     const SizedBox(height: 15),
 
-                    // Espace des quiz
+                    
                     Container(
                       width: double.infinity,
                       padding: const EdgeInsets.all(25),
@@ -162,7 +163,7 @@ class QuizSelectionPage extends StatelessWidget {
 
                     const SizedBox(height: 25),
 
-                    // Importer PDF
+                  
                     HomePage.actionButton(
                       context,
                       title: 'Importer PDF +',
@@ -175,8 +176,21 @@ class QuizSelectionPage extends StatelessWidget {
                     ),
 
                     const SizedBox(height: 18),
-
-                    // Générer avec IA
+                    HomePage.actionButton(
+                      context,
+                      title: 'Créer un quiz',
+                      icon: Icons.add_circle_outline_rounded,
+                      filled: true,
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const QuizEditorPage(),
+                             ),
+                            );
+                           },
+                          ),
+                    
                     HomePage.actionButton(
                       context,
                       title: 'Générer avec IA',
@@ -190,7 +204,7 @@ class QuizSelectionPage extends StatelessWidget {
 
                     const SizedBox(height: 18),
 
-                    // Salle d'attente
+                    
                     HomePage.actionButton(
                       context,
                       title: 'Salle d’attente',
@@ -204,7 +218,7 @@ class QuizSelectionPage extends StatelessWidget {
 
                     const SizedBox(height: 18),
 
-                    // Commencer
+                  
                     HomePage.actionButton(
                       context,
                       title: 'Commencer',
